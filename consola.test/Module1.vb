@@ -18,11 +18,15 @@ Module Module1
         'sResult = oData.Update(oModel)
         'sResult = oData.Delete(1)
 
-        Dim oDataTable As DataTable = oData.GetItems()
+        'Dim oDataTable As DataTable = oData.GetItems()
+        'For Each row As DataRow In oDataTable.Rows
+        '    Console.WriteLine("Nombre : " + row("nombre_apellido"))
+        'Next row
 
-        For Each row As DataRow In oDataTable.Rows
-            Console.WriteLine("Nombre : " + row("nombre_apellido"))
-        Next row
+
+        Dim oDataRow As DataRow = oData.GetOne(3)
+        Console.WriteLine("Nombre: " + oDataRow("nombre_apellido"))
+
 
 
         'Console.WriteLine("Resultado: " + sResult)

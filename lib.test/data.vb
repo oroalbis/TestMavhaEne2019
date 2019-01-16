@@ -123,5 +123,31 @@ Public Class data
         End Using
     End Function
 
+    Public Function GetOne(id As Integer) As DataRow
+
+        Using con As New SqlConnection(sConn)
+            Try
+                con.Open()
+
+                Dim Sql As String = "select * from personas where id = @id"
+                Dim cmd As SqlCommand = New SqlCommand(Sql, con)
+
+                cmd.Parameters.Add("@id", SqlDbType.Int).Value = id
+
+                Dim oDa = New SqlDataAdapter(cmd)
+                Dim oDt = New DataTable
+                oDa.Fill(oDt)
+
+                If oDt.Rows.Count <> 0 Then
+                    Return oDt(0)
+                Else
+                    Return Nothing
+                End If
+
+            Catch ex As Exception
+                Return Nothing
+            End Try
+        End Using
+    End Function
 
 End Class
