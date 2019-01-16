@@ -8,17 +8,24 @@ Module Module1
         Dim oData As New data.data
         Dim oModel As New data.persona
 
-        oModel.nombre = "Albis Oro Castillo"
+        oModel.nombre = "Tere C."
         oModel.edad = 42
-        oModel.fecha = New DateTime(1977, 8, 27)
-        oModel.sexo = "M"
-        oModel.id = 1
+        oModel.fecha = New DateTime(1974, 8, 27)
+        oModel.sexo = "F"
+        'oModel.id = 1
 
         'sResult = oData.Insert(oModel)
         'sResult = oData.Update(oModel)
-        sResult = oData.Delete(1)
+        'sResult = oData.Delete(1)
 
-        Console.WriteLine("Result : " + sResult)
+        Dim oDataTable As DataTable = oData.GetItems()
+
+        For Each row As DataRow In oDataTable.Rows
+            Console.WriteLine("Nombre : " + row("nombre_apellido"))
+        Next row
+
+
+        'Console.WriteLine("Resultado: " + sResult)
         Console.ReadKey()
     End Sub
 

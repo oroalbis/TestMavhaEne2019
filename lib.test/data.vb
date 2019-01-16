@@ -100,5 +100,28 @@ Public Class data
         End Using
     End Function
 
+    Public Function GetItems() As DataTable
+
+        Using con As New SqlConnection(sConn)
+            Try
+                con.Open()
+
+                Dim Sql As String = "select * from personas"
+                Dim cmd As SqlCommand = New SqlCommand(Sql, con)
+
+                'cmd.Parameters.Add("@id", SqlDbType.Int).Value = id
+
+                Dim oDa = New SqlDataAdapter(cmd)
+                Dim oDt = New DataTable
+                oDa.Fill(oDt)
+
+                Return oDt
+
+            Catch ex As Exception
+                Return Nothing
+            End Try
+        End Using
+    End Function
+
 
 End Class
