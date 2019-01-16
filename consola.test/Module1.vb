@@ -15,7 +15,8 @@ Module Module1
         oModel.id = 1
 
         'sResult = oData.Insert(oModel)
-        sResult = oData.Update(oModel)
+        'sResult = oData.Update(oModel)
+        sResult = oData.Delete(1)
 
         Console.WriteLine("Result : " + sResult)
         Console.ReadKey()

@@ -77,4 +77,28 @@ Public Class data
         End Using
     End Function
 
+    Public Function Delete(id As Int16)
+
+        Using con As New SqlConnection(sConn)
+            Try
+                con.Open()
+
+                Dim Sql As String = "delete from personas where id = @id"
+                Dim cmd As SqlCommand = New SqlCommand(Sql, con)
+
+                cmd.Parameters.Add("@id", SqlDbType.Int).Value = id
+
+                cmd.CommandType = CommandType.Text
+                Dim rowsAffected As Integer
+                rowsAffected = cmd.ExecuteNonQuery()
+
+                Return True
+
+            Catch ex As Exception
+                Return False
+            End Try
+        End Using
+    End Function
+
+
 End Class
