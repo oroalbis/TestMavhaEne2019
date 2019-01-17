@@ -76,8 +76,8 @@ Module Module1
         Dim sResult As String
         Dim oModel As New data.persona
 
-        Dim oDataTable As DataTable = oData.GetItems()
-        For Each row As DataRow In oDataTable.Rows
+        Dim oDataTable As DataSet = oData.GetItems()
+        For Each row As DataRow In oDataTable.Tables(0).Rows
             Console.WriteLine("Nombre : " + row("nombre_apellido"))
         Next row
 
@@ -89,8 +89,8 @@ Module Module1
         Dim oModel As New data.persona
 
 
-        Dim oDataRow As DataRow = oData.GetOne(3)
-        Console.WriteLine("Nombre: " + oDataRow("nombre_apellido"))
+        Dim oDs As DataSet = oData.GetOne(3)
+        Console.WriteLine("Nombre: " + oDs.Tables(0).Rows(0)("nombre_apellido"))
 
     End Sub
 
