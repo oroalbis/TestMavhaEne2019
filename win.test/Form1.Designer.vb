@@ -28,6 +28,8 @@ Partial Class frmPersonas
         Me.fecha_nacimiento = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Edad = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Sexo = New System.Windows.Forms.DataGridViewComboBoxColumn()
+        Me.lblObs2 = New System.Windows.Forms.Label()
+        Me.lblObs = New System.Windows.Forms.Label()
         CType(Me.dgvPersonas, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -35,14 +37,14 @@ Partial Class frmPersonas
         '
         Me.dgvPersonas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvPersonas.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.nombre_apellido, Me.fecha_nacimiento, Me.Edad, Me.Sexo})
-        Me.dgvPersonas.Location = New System.Drawing.Point(2, 21)
+        Me.dgvPersonas.Location = New System.Drawing.Point(2, 2)
         Me.dgvPersonas.Name = "dgvPersonas"
         Me.dgvPersonas.Size = New System.Drawing.Size(799, 360)
         Me.dgvPersonas.TabIndex = 0
         '
         'btnActualizar
         '
-        Me.btnActualizar.Location = New System.Drawing.Point(390, 401)
+        Me.btnActualizar.Location = New System.Drawing.Point(350, 409)
         Me.btnActualizar.Name = "btnActualizar"
         Me.btnActualizar.Size = New System.Drawing.Size(165, 23)
         Me.btnActualizar.TabIndex = 1
@@ -77,11 +79,33 @@ Partial Class frmPersonas
         Me.Sexo.Name = "Sexo"
         Me.Sexo.Width = 120
         '
+        'lblObs2
+        '
+        Me.lblObs2.ForeColor = System.Drawing.Color.DarkBlue
+        Me.lblObs2.Location = New System.Drawing.Point(291, 384)
+        Me.lblObs2.Name = "lblObs2"
+        Me.lblObs2.Size = New System.Drawing.Size(276, 17)
+        Me.lblObs2.TabIndex = 2
+        Me.lblObs2.Text = "Esperando Actualizaciones"
+        Me.lblObs2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lblObs
+        '
+        Me.lblObs.ForeColor = System.Drawing.Color.DarkBlue
+        Me.lblObs.Location = New System.Drawing.Point(291, 364)
+        Me.lblObs.Name = "lblObs"
+        Me.lblObs.Size = New System.Drawing.Size(276, 17)
+        Me.lblObs.TabIndex = 3
+        Me.lblObs.Text = "Iniciando Carga...."
+        Me.lblObs.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
         'frmPersonas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(800, 438)
+        Me.Controls.Add(Me.lblObs)
+        Me.Controls.Add(Me.lblObs2)
         Me.Controls.Add(Me.btnActualizar)
         Me.Controls.Add(Me.dgvPersonas)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
@@ -101,4 +125,6 @@ Partial Class frmPersonas
     Friend WithEvents fecha_nacimiento As DataGridViewTextBoxColumn
     Friend WithEvents Edad As DataGridViewTextBoxColumn
     Friend WithEvents Sexo As DataGridViewComboBoxColumn
+    Friend WithEvents lblObs2 As Label
+    Friend WithEvents lblObs As Label
 End Class
