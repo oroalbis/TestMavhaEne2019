@@ -23,6 +23,7 @@ Partial Class frmPersonas
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.dgvPersonas = New System.Windows.Forms.DataGridView()
+        Me.btnActualizar = New System.Windows.Forms.Button()
         Me.nombre_apellido = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.fecha_nacimiento = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Edad = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -36,8 +37,17 @@ Partial Class frmPersonas
         Me.dgvPersonas.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.nombre_apellido, Me.fecha_nacimiento, Me.Edad, Me.Sexo})
         Me.dgvPersonas.Location = New System.Drawing.Point(2, 21)
         Me.dgvPersonas.Name = "dgvPersonas"
-        Me.dgvPersonas.Size = New System.Drawing.Size(799, 430)
+        Me.dgvPersonas.Size = New System.Drawing.Size(799, 360)
         Me.dgvPersonas.TabIndex = 0
+        '
+        'btnActualizar
+        '
+        Me.btnActualizar.Location = New System.Drawing.Point(390, 401)
+        Me.btnActualizar.Name = "btnActualizar"
+        Me.btnActualizar.Size = New System.Drawing.Size(165, 23)
+        Me.btnActualizar.TabIndex = 1
+        Me.btnActualizar.Text = "Actualizar Datos"
+        Me.btnActualizar.UseVisualStyleBackColor = True
         '
         'nombre_apellido
         '
@@ -72,6 +82,7 @@ Partial Class frmPersonas
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.btnActualizar)
         Me.Controls.Add(Me.dgvPersonas)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.MaximizeBox = False
@@ -85,6 +96,7 @@ Partial Class frmPersonas
     End Sub
 
     Friend WithEvents dgvPersonas As DataGridView
+    Friend WithEvents btnActualizar As Button
     Friend WithEvents nombre_apellido As DataGridViewTextBoxColumn
     Friend WithEvents fecha_nacimiento As DataGridViewTextBoxColumn
     Friend WithEvents Edad As DataGridViewTextBoxColumn
