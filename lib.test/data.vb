@@ -100,7 +100,7 @@ Public Class data
         End Using
     End Function
 
-    Public Function GetItems() As DataTable
+    Public Function GetItems() As DataSet
 
         Using con As New SqlConnection(sConn)
             Try
@@ -112,7 +112,7 @@ Public Class data
                 'cmd.Parameters.Add("@id", SqlDbType.Int).Value = id
 
                 Dim oDa = New SqlDataAdapter(cmd)
-                Dim oDt = New DataTable
+                Dim oDt = New DataSet
                 oDa.Fill(oDt)
 
                 Return oDt
@@ -123,7 +123,7 @@ Public Class data
         End Using
     End Function
 
-    Public Function GetOne(id As Integer) As DataRow
+    Public Function GetOne(id As Integer) As DataSet
 
         Using con As New SqlConnection(sConn)
             Try
@@ -135,14 +135,10 @@ Public Class data
                 cmd.Parameters.Add("@id", SqlDbType.Int).Value = id
 
                 Dim oDa = New SqlDataAdapter(cmd)
-                Dim oDt = New DataTable
+                Dim oDt = New DataSet
                 oDa.Fill(oDt)
 
-                If oDt.Rows.Count <> 0 Then
-                    Return oDt(0)
-                Else
-                    Return Nothing
-                End If
+                Return oDt
 
             Catch ex As Exception
                 Return Nothing
