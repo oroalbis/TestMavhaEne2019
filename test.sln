@@ -35,6 +35,27 @@ Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "win.test", "win.test\win.te
 		{674D58AD-C095-4D78-818C-065832754FC1} = {674D58AD-C095-4D78-818C-065832754FC1}
 	EndProjectSection
 EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "web.test(1)", "web.test\", "{591C2C1C-2243-426B-86E3-14169E6F6B83}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_57807"
+		Debug.AspNetCompiler.PhysicalPath = "web.test\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_57807\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_57807"
+		Release.AspNetCompiler.PhysicalPath = "web.test\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_57807\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "57807"
+		SlnRelativePath = "web.test\"
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +78,10 @@ Global
 		{35890854-3F5A-4FA9-9418-F09CE5D65842}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{35890854-3F5A-4FA9-9418-F09CE5D65842}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{35890854-3F5A-4FA9-9418-F09CE5D65842}.Release|Any CPU.Build.0 = Release|Any CPU
+		{591C2C1C-2243-426B-86E3-14169E6F6B83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{591C2C1C-2243-426B-86E3-14169E6F6B83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{591C2C1C-2243-426B-86E3-14169E6F6B83}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{591C2C1C-2243-426B-86E3-14169E6F6B83}.Release|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
