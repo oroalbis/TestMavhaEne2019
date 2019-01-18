@@ -55,6 +55,9 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "web.test(1)", "web.test\", 
 		VWDPort = "57807"
 		SlnRelativePath = "web.test\"
 	EndProjectSection
+	ProjectSection(ProjectDependencies) = postProject
+		{674D58AD-C095-4D78-818C-065832754FC1} = {674D58AD-C095-4D78-818C-065832754FC1}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

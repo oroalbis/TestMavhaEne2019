@@ -40,21 +40,47 @@
                 </asp:Label>
             </div>           
             <br />
-               <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="Code,Type,Gender" 
+               <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="id" 
                 ShowFooter="True" OnRowCancelingEdit="GridView1_RowCancelingEdit" OnRowDataBound="GridView1_RowDataBound" 
                 OnRowDeleting="GridView1_RowDeleting"
                 OnRowEditing="GridView1_RowEditing" OnRowUpdating="GridView1_RowUpdating" OnRowCommand="GridView1_RowCommand" 
                 CellPadding="0" ForeColor="#333333" CssClass="table table-striped table-bordered table-condensed">
                     <Columns>
-                        <asp:TemplateField HeaderText="Name">
+                        <asp:TemplateField HeaderText="Nombre Apellido">
                             <EditItemTemplate>
-                                <asp:TextBox id="txtName" runat="server" Text='<%# Eval("Name") %>'></asp:TextBox>
+                                <asp:TextBox id="txtName" runat="server" Text='<%# Eval("nombre_apellido") %>'></asp:TextBox>
                             </EditItemTemplate>
                             <ItemTemplate>
-                                <asp:Label id="Label1" runat="server" Text='<%# Eval("Name") %>'></asp:Label>
+                                <asp:Label id="Label1" runat="server" Text='<%# Eval("nombre_apellido") %>'></asp:Label>
                             </ItemTemplate>
                             <FooterTemplate>
                                 <asp:TextBox ID="txtNewName" runat="server" ></asp:TextBox>
+                            </FooterTemplate>
+                            <ItemStyle Wrap="True" />
+                        </asp:TemplateField>
+
+                        <asp:TemplateField HeaderText="Fecha Nacimiento">
+                            <EditItemTemplate>
+                                <asp:TextBox id="txtfecha" runat="server" Text='<%# Eval("fecha_nacimiento") %>'></asp:TextBox>
+                            </EditItemTemplate>
+                            <ItemTemplate>
+                                <asp:Label id="Label3" runat="server" Text='<%# Eval("fecha_nacimiento") %>'></asp:Label>
+                            </ItemTemplate>
+                            <FooterTemplate>
+                                <asp:TextBox ID="txtNewFecha" runat="server" ></asp:TextBox>
+                            </FooterTemplate>
+                            <ItemStyle Wrap="True" />
+                        </asp:TemplateField>
+
+                        <asp:TemplateField HeaderText="Edad">
+                            <EditItemTemplate>
+                                <asp:TextBox id="txtedad" runat="server" Text='<%# Eval("edad") %>'></asp:TextBox>
+                            </EditItemTemplate>
+                            <ItemTemplate>
+                                <asp:Label id="Label4" runat="server" Text='<%# Eval("edad") %>'></asp:Label>
+                            </ItemTemplate>
+                            <FooterTemplate>
+                                <asp:TextBox ID="txtNewEdad" runat="server" ></asp:TextBox>
                             </FooterTemplate>
                             <ItemStyle Wrap="True" />
                         </asp:TemplateField>
@@ -63,60 +89,17 @@
                             <EditItemTemplate>
                                 &nbsp;           
                                 <asp:DropDownList ID="cmbGender" runat="server">
-                                    <asp:ListItem>Male</asp:ListItem>
-                                    <asp:ListItem>Female</asp:ListItem>
+                                    <asp:ListItem>M</asp:ListItem>
+                                    <asp:ListItem>F</asp:ListItem>
                                 </asp:DropDownList>
                             </EditItemTemplate>
                             <ItemTemplate>
-                                <asp:Label runat="server" Text='<%# Eval("Gender")%>' id="Label2"></asp:Label>
+                                <asp:Label runat="server" Text='<%# Eval("sexo")%>' id="Label2"></asp:Label>
                             </ItemTemplate>
                             <FooterTemplate>
                                 <asp:DropDownList ID="cmbNewGender" runat="server" >
-                                    <asp:ListItem>Male</asp:ListItem>
-                                    <asp:ListItem>Female</asp:ListItem>
-                                </asp:DropDownList>
-                            </FooterTemplate>
-                        </asp:TemplateField>
-
-                        <asp:TemplateField HeaderText="City">
-                            <EditItemTemplate>
-                                <asp:TextBox runat="server" Text='<%# Eval("City")%>' id="txtCity"></asp:TextBox>
-                            </EditItemTemplate>
-                            <ItemTemplate>
-                                <asp:Label runat="server" Text='<%# Eval("City")%>' id="Label3"></asp:Label>
-                            </ItemTemplate>
-                            <FooterTemplate>
-                                <asp:TextBox ID="txtNewCity" runat="server" ></asp:TextBox>
-                            </FooterTemplate>
-                        </asp:TemplateField>
-
-                        <asp:TemplateField HeaderText="State">
-                            <EditItemTemplate>
-                                <asp:TextBox runat="server" Text='<%# Eval("State")%>' id="txtState"></asp:TextBox>
-                            </EditItemTemplate>
-                            <ItemTemplate>
-                                <asp:Label runat="server" Text='<%# Eval("State")%>' id="Label4"></asp:Label>
-                            </ItemTemplate>
-                            <FooterTemplate>
-                                <asp:TextBox ID="txtNewState" runat="server"></asp:TextBox>
-                            </FooterTemplate>
-                        </asp:TemplateField>
-
-                        <asp:TemplateField HeaderText="Type">
-                            <EditItemTemplate>
-                                &nbsp;
-                            <asp:DropDownList ID="cmbType" runat="server">
-                                    <asp:ListItem>Retail</asp:ListItem>
-                                    <asp:ListItem>Wholesale</asp:ListItem>
-                                </asp:DropDownList>
-                            </EditItemTemplate>
-                            <ItemTemplate>
-                                <asp:Label runat="server" Text='<%# Eval("Type") %>' id="Label5"></asp:Label>
-                            </ItemTemplate>
-                            <FooterTemplate>
-                                <asp:DropDownList ID="cmbNewType" runat="server">
-                                     <asp:ListItem>Retail</asp:ListItem>
-                                     <asp:ListItem>Wholesale</asp:ListItem>
+                                    <asp:ListItem>M</asp:ListItem>
+                                    <asp:ListItem>F</asp:ListItem>
                                 </asp:DropDownList>
                             </FooterTemplate>
                         </asp:TemplateField>

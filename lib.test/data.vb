@@ -106,7 +106,7 @@ Public Class data
             Try
                 con.Open()
 
-                Dim Sql As String = "select * from personas"
+                Dim Sql As String = "select id,nombre_apellido,FORMAT(fecha_nacimiento,'dd/MM/yyyy', 'en-us') fecha_nacimiento,edad,sexo from personas"
                 Dim cmd As SqlCommand = New SqlCommand(Sql, con)
 
                 'cmd.Parameters.Add("@id", SqlDbType.Int).Value = id
@@ -129,7 +129,7 @@ Public Class data
             Try
                 con.Open()
 
-                Dim Sql As String = "select * from personas where id = @id"
+                Dim Sql As String = "select id,nombre_apellido,FORMAT(fecha_nacimiento,'dd/MM/yyyy', 'en-us') fecha_nacimiento,edad,sexo from personas where id = @id"
                 Dim cmd As SqlCommand = New SqlCommand(Sql, con)
 
                 cmd.Parameters.Add("@id", SqlDbType.Int).Value = id
