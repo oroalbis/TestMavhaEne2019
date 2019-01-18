@@ -8,7 +8,6 @@ Imports System.Collections.Generic
 
 Partial Class _Default
     Inherits System.Web.UI.Page
-    Dim objCustomer As CustomerCls
     Dim oData As New dataService.data
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
@@ -52,6 +51,10 @@ Partial Class _Default
         FillCustomerInGrid()
     End Sub
 
+    Private Function CamposOk(nombre As String, fecha As String, edad As String, sexo As String) As Boolean
+        Return (nombre.Length > 0 And fecha.Length > 0 And edad.Length > 0 And sexo.Length > 0)
+    End Function
+
     Protected Sub GridView1_RowCommand(ByVal sender As Object, ByVal e As System.Web.UI.WebControls.GridViewCommandEventArgs)
         If e.CommandName.Equals("AddNew") Then
             Dim txtNewName As TextBox
@@ -63,9 +66,15 @@ Partial Class _Default
             Dim txtNewEdad As TextBox
             txtNewEdad = CType(GridView1.FooterRow.FindControl("txtNewEdad"), TextBox)
 
-            objCustomer = New CustomerCls
-            oData.Insert(txtNewName.Text, Convert.ToInt16(txtNewEdad.Text), Convert.ToDateTime(txtNewFecha.Text), Convert.ToChar(cmbNewGender.SelectedValue))
-            FillCustomerInGrid()
+
+            If CamposOk(txtNewName.Text, txtNewEdad.Text, txtNewFecha.Text, Convert.ToChar(cmbNewGender.SelectedValue)) Then
+                oData.Insert(txtNewName.Text, Convert.ToInt16(txtNewEdad.Text), Convert.ToDateTime(txtNewFecha.Text), Convert.ToChar(cmbNewGender.SelectedValue))
+                FillCustomerInGrid()
+            Else
+                ClientScript.RegisterStartupScript(Me.GetType, "myalert", "alert('Todos los campos son obligatorios');", True)
+            End If
+
+
 
         ElseIf e.CommandName.Equals("Delete") Then
 
@@ -125,9 +134,13 @@ Partial Class _Default
             cmbGender = CType(GridView1.Rows(e.RowIndex).FindControl("cmbGender"), DropDownList)
             Dim sexo = cmbGender.SelectedValue
 
-            oData.Update(id, txtName.Text, Convert.ToInt16(txtEdad.Text), Convert.ToDateTime(txtFecha.Text), Convert.ToChar(sexo))
-            GridView1.EditIndex = -1
-            FillCustomerInGrid()
+            If CamposOk(txtName.Text, txtEdad.Text, txtFecha.Text, sexo) Then
+                oData.Update(id, txtName.Text, Convert.ToInt16(txtEdad.Text), Convert.ToDateTime(txtFecha.Text), Convert.ToChar(sexo))
+                GridView1.EditIndex = -1
+                FillCustomerInGrid()
+            Else
+                ClientScript.RegisterStartupScript(Me.GetType, "myalert", "alert('Todos los campos son obligatorios');", True)
+            End If
         End If
 
     End Sub

@@ -36,7 +36,7 @@
     <div id="Container">
         <div id="GridContainer">
             <div id="LabelContainer">
-                <asp:Label ID="lblHeading" runat="server" Text="ASP.NET GridView CRUD with Bootstrap (VB.NET)" >
+                <asp:Label ID="lblHeading" runat="server" Text="Mantenimiento de personas." >
                 </asp:Label>
             </div>           
             <br />
