@@ -27,7 +27,7 @@ Public Class data
             Try
                 con.Open()
 
-                Dim Sql As String = "INSERT INTO personas(nombre_apellido, fecha_nacimiento, edad, sexo) VALUES(@nombre_apellido,@fecha_nacimiento,@edad, @sexo); SELECT SCOPE_IDENTITY()"
+                Dim Sql As String = "INSERT INTO personas(nombre_apellido, fecha_nacimiento, edad, sexo, sn_activo) VALUES(LTRIM(RTRIM(@nombre_apellido)),@fecha_nacimiento,@edad, @sexo,1); SELECT SCOPE_IDENTITY()"
                 Dim cmd As SqlCommand = New SqlCommand(Sql, con)
 
                 cmd.Parameters.Add("@nombre_apellido", SqlDbType.VarChar, 150).Value = model.nombre
@@ -55,7 +55,7 @@ Public Class data
             Try
                 con.Open()
 
-                Dim Sql As String = "update personas set nombre_apellido = @nombre_apellido, fecha_nacimiento = @fecha_nacimiento , edad = @edad, sexo = @sexo where id =@id"
+                Dim Sql As String = "update personas set nombre_apellido = LTRIM(RTRIM(@nombre_apellido)), fecha_nacimiento = @fecha_nacimiento , edad = @edad, sexo = @sexo where id =@id"
                 Dim cmd As SqlCommand = New SqlCommand(Sql, con)
 
                 cmd.Parameters.Add("@nombre_apellido", SqlDbType.VarChar, 150).Value = model.nombre
@@ -78,6 +78,29 @@ Public Class data
     End Function
 
     Public Function Delete(id As Int16)
+
+        Using con As New SqlConnection(sConn)
+            Try
+                con.Open()
+
+                Dim Sql As String = "update personas set sn_activo = 0 where id = @id"
+                Dim cmd As SqlCommand = New SqlCommand(Sql, con)
+
+                cmd.Parameters.Add("@id", SqlDbType.Int).Value = id
+
+                cmd.CommandType = CommandType.Text
+                Dim rowsAffected As Integer
+                rowsAffected = cmd.ExecuteNonQuery()
+
+                Return True
+
+            Catch ex As Exception
+                Return False
+            End Try
+        End Using
+    End Function
+
+    Public Function DeletePermanent(id As Int16)
 
         Using con As New SqlConnection(sConn)
             Try
@@ -106,7 +129,7 @@ Public Class data
             Try
                 con.Open()
 
-                Dim Sql As String = "select id,nombre_apellido,FORMAT(fecha_nacimiento,'dd/MM/yyyy', 'en-us') fecha_nacimiento,edad,sexo from personas"
+                Dim Sql As String = "select id,nombre_apellido,FORMAT(fecha_nacimiento,'dd/MM/yyyy', 'en-us') fecha_nacimiento,edad,sexo from personas where sn_activo = 1"
                 Dim cmd As SqlCommand = New SqlCommand(Sql, con)
 
                 'cmd.Parameters.Add("@id", SqlDbType.Int).Value = id
