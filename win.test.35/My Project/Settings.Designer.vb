@@ -58,9 +58,9 @@ Namespace My
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.WebServiceUrl),  _
          Global.System.Configuration.DefaultSettingValueAttribute("http://localhost:56438/data.asmx")>  _
-        Public ReadOnly Property consola_test_dataService_data() As String
+        Public ReadOnly Property win_test_35_dataService_data() As String
             Get
-                Return CType(Me("consola_test_dataService_data"),String)
+                Return CType(Me("win_test_35_dataService_data"),String)
             End Get
         End Property
     End Class
@@ -74,9 +74,9 @@ Namespace My
     Friend Module MySettingsProperty
         
         <Global.System.ComponentModel.Design.HelpKeywordAttribute("My.Settings")>  _
-        Friend ReadOnly Property Settings() As Global.consola.test.My.MySettings
+        Friend ReadOnly Property Settings() As Global.win.test._35.My.MySettings
             Get
-                Return Global.consola.test.My.MySettings.Default
+                Return Global.win.test._35.My.MySettings.Default
             End Get
         End Property
     End Module

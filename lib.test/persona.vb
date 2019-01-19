@@ -49,4 +49,14 @@
         End Set
     End Property
 
+    Private snActivoValue As String
+    Public Property snactivo() As String
+        Get
+            Return snActivoValue
+        End Get
+        Set(ByVal value As String)
+            snActivoValue = value
+        End Set
+    End Property
+
 End Class
