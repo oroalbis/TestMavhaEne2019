@@ -247,10 +247,10 @@
   </wsdl:binding>
   <wsdl:service name="data">
     <wsdl:port name="dataSoap" binding="tns:dataSoap">
-      <soap:address location="http://localhost:63141/data.asmx" />
+      <soap:address location="http://localhost:56438/data.asmx" />
     </wsdl:port>
     <wsdl:port name="dataSoap12" binding="tns:dataSoap12">
-      <soap12:address location="http://localhost:63141/data.asmx" />
+      <soap12:address location="http://localhost:56438/data.asmx" />
     </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>

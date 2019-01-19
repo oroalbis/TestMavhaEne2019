@@ -57,7 +57,7 @@ Namespace My
         <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.WebServiceUrl),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("http://localhost:63141/data.asmx")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("http://localhost:56438/data.asmx")>  _
         Public ReadOnly Property consola_test_dataService_data() As String
             Get
                 Return CType(Me("consola_test_dataService_data"),String)

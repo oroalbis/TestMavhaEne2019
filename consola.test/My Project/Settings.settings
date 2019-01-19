@@ -3,7 +3,7 @@
   <Profiles />
   <Settings>
     <Setting Name="consola_test_dataService_data" Type="(Web Service URL)" Scope="Application">
-      <Value Profile="(Default)">http://localhost:63141/data.asmx</Value>
+      <Value Profile="(Default)">http://localhost:56438/data.asmx</Value>
     </Setting>
   </Settings>
 </SettingsFile>
