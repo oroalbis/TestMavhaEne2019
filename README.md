@@ -47,8 +47,9 @@ GO
 
 Consideraciones:
 
-- **--** Construir una Solución .Net con los siguientes proyectos:
--
+- **--** Construir una Solución .Net con los siguientes proyectos:  
+![alt text](https://github.com/oroalbis/TestMavhaEne2019/images/solucion.png)
+
 **--**** Solución con los proyectos:**
  
   -
