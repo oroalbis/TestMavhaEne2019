@@ -4,29 +4,39 @@ Imports data = [lib].test
 Module Module1
 
     Sub Main()
+        TestDll()
+    End Sub
 
-        Console.WriteLine("Escriba la primera letra de la operación a realizar:")
-        Dim iKey = Console.Read()
+    Private Sub TestDll()
+        Dim bStop As Boolean = False
 
-        Dim sOption As String = Convert.ToChar(iKey)
+        Do
+            Console.WriteLine("Escriba la primera letra de la operación a realizar:")
+            Console.WriteLine("O la letra x para salir.")
+            Dim iKey = Console.Read()
 
-        Select Case sOption.ToUpper()
-            Case "I"
-                Insert()
-            Case "U"
-                Update()
-            Case "D"
-                Delete()
-            Case "T"
-                GetItems()
-            Case "O"
-                GetOne()
-            Case Else
-                Console.WriteLine("La opción no existe.")
-        End Select
+            Dim sOption As String = Convert.ToChar(iKey)
+
+            Select Case sOption.ToUpper()
+                Case "I"
+                    Insert()
+                Case "U"
+                    Update()
+                Case "D"
+                    Delete()
+                Case "T"
+                    GetItems()
+                Case "O"
+                    GetOne()
+                Case "X"
+                    End
+                Case Else
+                    Console.WriteLine("La opción no existe.")
+            End Select
+
+        Loop Until bStop
 
 
-        Console.ReadKey()
     End Sub
 
     Private Sub Insert()
@@ -38,6 +48,7 @@ Module Module1
         oModel.edad = 42
         oModel.fecha = New DateTime(1974, 8, 27)
         oModel.sexo = "F"
+        oModel.snactivo = 1
 
         sResult = oData.Insert(oModel)
 
@@ -53,7 +64,8 @@ Module Module1
         oModel.edad = 42
         oModel.fecha = New DateTime(1974, 8, 27)
         oModel.sexo = "F"
-        oModel.id = 4
+        oModel.id = 1
+        oModel.snactivo = 1
 
         sResult = oData.Update(oModel)
 
