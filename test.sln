@@ -7,32 +7,9 @@ Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "lib.test", "lib.test\lib.te
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "consola.test", "consola.test\consola.test.vbproj", "{A18E414E-1E06-41F7-B77E-52F44CB13B30}"
 EndProject
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "service.test", "service.test\", "{674D58AD-C095-4D78-818C-065832754FC1}"
-	ProjectSection(WebsiteProperties) = preProject
-		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.6"
-		ProjectReferences = "{858f127c-0469-42f4-a284-d4d8740ea7a7}|lib.test.dll;"
-		Debug.AspNetCompiler.VirtualPath = "/localhost_63141"
-		Debug.AspNetCompiler.PhysicalPath = "service.test\"
-		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_63141\"
-		Debug.AspNetCompiler.Updateable = "true"
-		Debug.AspNetCompiler.ForceOverwrite = "true"
-		Debug.AspNetCompiler.FixedNames = "false"
-		Debug.AspNetCompiler.Debug = "True"
-		Release.AspNetCompiler.VirtualPath = "/localhost_63141"
-		Release.AspNetCompiler.PhysicalPath = "service.test\"
-		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_63141\"
-		Release.AspNetCompiler.Updateable = "true"
-		Release.AspNetCompiler.ForceOverwrite = "true"
-		Release.AspNetCompiler.FixedNames = "false"
-		Release.AspNetCompiler.Debug = "False"
-		VWDPort = "63141"
-		SlnRelativePath = "service.test\"
-		DefaultWebSiteLanguage = "Visual Basic"
-	EndProjectSection
-EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "win.test", "win.test\win.test.vbproj", "{35890854-3F5A-4FA9-9418-F09CE5D65842}"
 	ProjectSection(ProjectDependencies) = postProject
-		{674D58AD-C095-4D78-818C-065832754FC1} = {674D58AD-C095-4D78-818C-065832754FC1}
+		{3CAB88F0-82B5-4B9B-9553-6E4CF0840231} = {3CAB88F0-82B5-4B9B-9553-6E4CF0840231}
 	EndProjectSection
 EndProject
 Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "web.test(1)", "web.test\", "{591C2C1C-2243-426B-86E3-14169E6F6B83}"
@@ -55,11 +32,13 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "web.test(1)", "web.test\", 
 		VWDPort = "57807"
 		SlnRelativePath = "web.test\"
 	EndProjectSection
-	ProjectSection(ProjectDependencies) = postProject
-		{674D58AD-C095-4D78-818C-065832754FC1} = {674D58AD-C095-4D78-818C-065832754FC1}
-	EndProjectSection
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "service.test.35", "service.test.35\service.test.35.vbproj", "{3CAB88F0-82B5-4B9B-9553-6E4CF0840231}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "win.test.35", "win.test.35\win.test.35.vbproj", "{E34CFA4C-C230-4EAC-8C85-66718B9DE982}"
+	ProjectSection(ProjectDependencies) = postProject
+		{3CAB88F0-82B5-4B9B-9553-6E4CF0840231} = {3CAB88F0-82B5-4B9B-9553-6E4CF0840231}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -75,10 +54,6 @@ Global
 		{A18E414E-1E06-41F7-B77E-52F44CB13B30}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A18E414E-1E06-41F7-B77E-52F44CB13B30}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A18E414E-1E06-41F7-B77E-52F44CB13B30}.Release|Any CPU.Build.0 = Release|Any CPU
-		{674D58AD-C095-4D78-818C-065832754FC1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{674D58AD-C095-4D78-818C-065832754FC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{674D58AD-C095-4D78-818C-065832754FC1}.Release|Any CPU.ActiveCfg = Debug|Any CPU
-		{674D58AD-C095-4D78-818C-065832754FC1}.Release|Any CPU.Build.0 = Debug|Any CPU
 		{35890854-3F5A-4FA9-9418-F09CE5D65842}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{35890854-3F5A-4FA9-9418-F09CE5D65842}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{35890854-3F5A-4FA9-9418-F09CE5D65842}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -91,6 +66,10 @@ Global
 		{3CAB88F0-82B5-4B9B-9553-6E4CF0840231}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3CAB88F0-82B5-4B9B-9553-6E4CF0840231}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3CAB88F0-82B5-4B9B-9553-6E4CF0840231}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E34CFA4C-C230-4EAC-8C85-66718B9DE982}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E34CFA4C-C230-4EAC-8C85-66718B9DE982}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E34CFA4C-C230-4EAC-8C85-66718B9DE982}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E34CFA4C-C230-4EAC-8C85-66718B9DE982}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
