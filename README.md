@@ -48,18 +48,24 @@ GO
 Consideraciones:
 
 - **--** Construir una Solución .Net con los siguientes proyectos:  
-![alt text](https://github.com/oroalbis/TestMavhaEne2019/images/solucion.png)
 
-**--**** Solución con los proyectos:**
+**--**** Solución con los proyectos:**  
+ ![alt text](https://github.com/oroalbis/TestMavhaEne2019/blob/master/images/solucion.png)  
+  
+--Proyecto VB.Net con la Lógica de negocio del ABML.  
+ ![alt text](https://github.com/oroalbis/TestMavhaEne2019/blob/master/images/dllapp.png)  
+  
+--Proyecto de WebServices SOAP que reuse el proyecto de Logica.  
+ ![alt text](https://github.com/oroalbis/TestMavhaEne2019/blob/master/images/serviceapp.png)  
  
-  -
---Proyecto VB.Net con la Lógica de negocio del ABML.
+--Proyecto WinForms en VB.Net para ABML de Personas, que consuma los servicios del proyecto SOAP.  
+ ![alt text](https://github.com/oroalbis/TestMavhaEne2019/blob/master/images/winapp.png)  
+ ![alt text](https://github.com/oroalbis/TestMavhaEne2019/blob/master/images/winapp2.png)  
  
-  -
---Proyecto de WebServices SOAP que reuse el proyecto de Logica.
+ --Proyecto Web con ASPX en VB.Net para ABML de Personas  
+ ![alt text](https://github.com/oroalbis/TestMavhaEne2019/blob/master/images/webapp.png)  
+ ![alt text](https://github.com/oroalbis/TestMavhaEne2019/blob/master/images/webapp2.png)  
  
-  -
---Proyecto WinForms en VB.Net para ABML de Personas, que consuma los servicios del proyecto SOAP.
  
 - **--** Utilizar VisualStudio 2013 o superior.  
 **SE UTILIZÓ VISUAL STUDIO 2017**
