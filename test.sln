@@ -7,11 +7,6 @@ Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "lib.test", "lib.test\lib.te
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "consola.test", "consola.test\consola.test.vbproj", "{A18E414E-1E06-41F7-B77E-52F44CB13B30}"
 EndProject
-Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "win.test", "win.test\win.test.vbproj", "{35890854-3F5A-4FA9-9418-F09CE5D65842}"
-	ProjectSection(ProjectDependencies) = postProject
-		{3CAB88F0-82B5-4B9B-9553-6E4CF0840231} = {3CAB88F0-82B5-4B9B-9553-6E4CF0840231}
-	EndProjectSection
-EndProject
 Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "web.test(1)", "web.test\", "{591C2C1C-2243-426B-86E3-14169E6F6B83}"
 	ProjectSection(WebsiteProperties) = preProject
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5"
@@ -54,10 +49,6 @@ Global
 		{A18E414E-1E06-41F7-B77E-52F44CB13B30}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A18E414E-1E06-41F7-B77E-52F44CB13B30}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A18E414E-1E06-41F7-B77E-52F44CB13B30}.Release|Any CPU.Build.0 = Release|Any CPU
-		{35890854-3F5A-4FA9-9418-F09CE5D65842}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{35890854-3F5A-4FA9-9418-F09CE5D65842}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{35890854-3F5A-4FA9-9418-F09CE5D65842}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{35890854-3F5A-4FA9-9418-F09CE5D65842}.Release|Any CPU.Build.0 = Release|Any CPU
 		{591C2C1C-2243-426B-86E3-14169E6F6B83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{591C2C1C-2243-426B-86E3-14169E6F6B83}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{591C2C1C-2243-426B-86E3-14169E6F6B83}.Release|Any CPU.ActiveCfg = Debug|Any CPU
